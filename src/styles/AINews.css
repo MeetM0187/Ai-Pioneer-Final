@@ -1,0 +1,113 @@
+.hero-small {
+    padding: 60px 0;
+    background: linear-gradient(135deg, rgba(106, 17, 203, 0.05) 0%, rgba(37, 117, 252, 0.05) 100%);
+    text-align: center;
+}
+
+.hero-small h1 {
+    margin-bottom: 15px;
+}
+
+.hero-small p {
+    color: var(--muted-text-color);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.news-grid {
+    padding: var(--section-padding);
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.news-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.news-date {
+    font-size: 0.85rem;
+    color: var(--muted-text-color);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.news-content {
+    padding: 20px;
+}
+
+.news-category {
+    display: inline-block;
+    padding: 4px 10px;
+    background: var(--surface-color);
+    border-radius: 15px;
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.news-content h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.news-content p {
+    color: var(--muted-text-color);
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.read-more {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: var(--secondary-color);
+}
+
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-small {
+        padding: 40px 0;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .news-content h2 {
+        font-size: 1.2rem;
+    }
+}
